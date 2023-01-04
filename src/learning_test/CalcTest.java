@@ -25,4 +25,9 @@ class CalcTest {
 	void shouldSum1PositiveAnd1NegativeNumber2() {
 		assertEquals(0, calc.sum(7, -7));
 	}
+
+	@Test
+	void shouldReturn0WhenSumming0And0() {
+		assertEquals(0, calc.sum(0, 0));
+	}
 }
