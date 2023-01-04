@@ -17,4 +17,16 @@ public class BonusServiceTest {
       bonus
     );
   }
+
+  @Test
+  public void ShouldBe100When10PercentOfSalaryIsLessThen1000() {
+    BonusService bonusService = new BonusService();
+    BigDecimal bonus = bonusService.calculateBonus(
+      new Employee("John", LocalDate.now(), new BigDecimal("1000"))
+    );
+    Assert.assertEquals(
+      new BigDecimal("100.00"),
+      bonus
+    );
+  }
 }
