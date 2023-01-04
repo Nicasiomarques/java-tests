@@ -29,4 +29,16 @@ public class BonusServiceTest {
       bonus
     );
   }
+
+  @Test
+  public void ShouldBe100When10PercentOfSalaryIs1000() {
+    BonusService bonusService = new BonusService();
+    BigDecimal bonus = bonusService.calculateBonus(
+      new Employee("John", LocalDate.now(), new BigDecimal("10000"))
+    );
+    Assert.assertEquals(
+      new BigDecimal("1000.00"),
+      bonus
+    );
+  }
 }
