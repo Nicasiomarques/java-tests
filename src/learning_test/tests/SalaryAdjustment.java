@@ -9,6 +9,8 @@ public class SalaryAdjustment {
     BigDecimal salary = employee.getSalary();
     if (Performance.DESIRING == performance) {
       employee.adjustSalary(salary.multiply(new BigDecimal("0.03")).add(salary));
+    } else if (Performance.GOOD == performance) {
+      employee.adjustSalary(salary.multiply(new BigDecimal("0.15")).add(salary));
     }
   }
 }
