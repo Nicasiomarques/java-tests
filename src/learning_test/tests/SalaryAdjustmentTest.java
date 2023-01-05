@@ -5,11 +5,12 @@ import org.junit.Assert;
 import org.junit.Test;
 import learning_test.entities.Employee;
 import learning_test.entities.Performance;
+import learning_test.services.SalaryAdjustmentService;
 
 public class SalaryAdjustmentTest {
   public void testEmployeePerformance(Performance performance, String salary, String salaryExpected) {
     // Arrange
-    SalaryAdjustment sut = new SalaryAdjustment();
+    SalaryAdjustmentService sut = new SalaryAdjustmentService();
     Employee employee = new Employee("john doe", LocalDate.now(), new BigDecimal(salary));
     // Act
     sut.adjust(employee, performance);
