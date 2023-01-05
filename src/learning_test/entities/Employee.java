@@ -1,4 +1,4 @@
-package learning_test;
+package learning_test.entities;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 

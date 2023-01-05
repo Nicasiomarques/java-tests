@@ -1,9 +1,12 @@
-package learning_test;
+package learning_test.tests;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import org.junit.Assert;
 import org.junit.Test;
+
+import learning_test.entities.Employee;
+import learning_test.services.BonusService;
 
 public class BonusServiceTest {
   BonusService bonusService = new BonusService();

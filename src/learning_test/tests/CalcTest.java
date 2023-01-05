@@ -1,7 +1,9 @@
-package learning_test;
+package learning_test.tests;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import learning_test.Calc;
 
 class CalcTest {
 	Calc calc = new Calc();

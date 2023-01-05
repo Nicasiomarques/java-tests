@@ -1,6 +1,8 @@
-package learning_test;
+package learning_test.services;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+
+import learning_test.entities.Employee;
 
 public class BonusService {
   public BigDecimal calculateBonus(Employee employee) {
