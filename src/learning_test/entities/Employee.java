@@ -21,6 +21,10 @@ public class Employee {
     return salary;
   }
 
+  public void adjustSalary(BigDecimal adjustedSalary) {
+    this.salary = adjustedSalary;
+  }
+
   public LocalDate getCreatedAt() {
     return createdAt;
   }
