@@ -1,5 +1,6 @@
 package learning_test.entities;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Employee {
@@ -18,7 +19,7 @@ public class Employee {
   }
 
   public BigDecimal getSalary() {
-    return salary;
+    return salary.setScale(2, RoundingMode.HALF_UP);
   }
 
   public void adjustSalary(BigDecimal adjustedSalary) {

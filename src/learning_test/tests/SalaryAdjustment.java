@@ -11,6 +11,8 @@ public class SalaryAdjustment {
       employee.adjustSalary(salary.multiply(new BigDecimal("0.03")).add(salary));
     } else if (Performance.GOOD == performance) {
       employee.adjustSalary(salary.multiply(new BigDecimal("0.15")).add(salary));
+    } else if(Performance.GREAT == performance) {
+      employee.adjustSalary(salary.multiply(new BigDecimal("0.2")).add(salary));
     }
   }
 }
