@@ -19,6 +19,16 @@ public class SalaryAdjustmentTest {
     
     sut.adjust(employee, Performance.DESIRING);
     
-    Assert.assertEquals(employee.getSalary(), new BigDecimal("1030.00"));
+    Assert.assertEquals(new BigDecimal("1030.00"), employee.getSalary());
+  }
+
+  @Test
+  public void adjustmentShouldBe3PercentWhenPerformanceIsGod() {
+    SalaryAdjustment sut = new SalaryAdjustment();
+    Employee employee = new Employee("john doe", LocalDate.now(), new BigDecimal("1000"));
+    
+    sut.adjust(employee, Performance.GOOD);
+    
+    Assert.assertEquals(new BigDecimal("1150.00"), employee.getSalary());
   }
 }
