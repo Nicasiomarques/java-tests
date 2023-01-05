@@ -4,12 +4,7 @@ import java.time.LocalDate;
 import org.junit.Assert;
 import org.junit.Test;
 import learning_test.entities.Employee;
-
-enum Performance {
-  DESIRING,
-  GOOD,
-  GREAT
-}
+import learning_test.entities.Performance;
 
 public class SalaryAdjustmentTest {
   public void testEmployeePerformance(Performance performance, String salary, String salaryExpected) {
