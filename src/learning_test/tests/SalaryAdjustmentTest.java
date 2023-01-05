@@ -23,12 +23,22 @@ public class SalaryAdjustmentTest {
   }
 
   @Test
-  public void adjustmentShouldBe3PercentWhenPerformanceIsGod() {
+  public void adjustmentShouldBe15PercentWhenPerformanceIsGod() {
     SalaryAdjustment sut = new SalaryAdjustment();
     Employee employee = new Employee("john doe", LocalDate.now(), new BigDecimal("1000"));
     
     sut.adjust(employee, Performance.GOOD);
     
     Assert.assertEquals(new BigDecimal("1150.00"), employee.getSalary());
+  }
+
+  @Test
+  public void adjustmentShouldBe20PercentWhenPerformanceIsGreat() {
+    SalaryAdjustment sut = new SalaryAdjustment();
+    Employee employee = new Employee("john doe", LocalDate.now(), new BigDecimal("1000"));
+    
+    sut.adjust(employee, Performance.GREAT);
+    
+    Assert.assertEquals(new BigDecimal("1200.00"), employee.getSalary());
   }
 }
